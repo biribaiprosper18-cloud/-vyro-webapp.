@@ -19,7 +19,37 @@ main{min-width:0}.top{height:66px;border-bottom:1px solid var(--line);display:fl
 .view{display:none}.view.active{display:block}.toast{position:fixed;bottom:20px;right:20px;background:#18271c;border:1px solid #435d2e;color:#e1ffb9;padding:11px 14px;border-radius:8px;font-size:10px;opacity:0;transition:.2s;z-index:20}.toast.show{opacity:1}
 footer{text-align:center;color:#56677d;font-size:9px;padding:15px}.source-note{font-size:9px;color:var(--muted);margin-top:8px}
 @media(max-width:1000px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:700px){.app{display:block}aside{height:auto;position:relative;padding:10px;border-right:0;border-bottom:1px solid var(--line)}.brand{padding:0 6px 10px}.navs{display:flex;overflow:auto;gap:4px}.nav{white-space:nowrap;width:auto;padding:9px}.aside-foot{display:none}.top{height:55px;padding:0 12px}.topright .status{display:none}.wrap{padding:16px 11px}.hero{align-items:flex-start;flex-direction:column}.hero h1{font-size:22px}.stats{gap:7px}.stat{padding:11px}.stat strong{font-size:18px}}
+@media(max-width:900px){.app{display:block}aside{height:auto;position:relative;padding:10px;border-right:0;border-bottom:1px solid var(--line)}.brand{padding:0 6px 10px}.navs{display:flex;overflow:auto;gap:4px}.nav{white-space:nowrap;width:auto;padding:9px}.aside-foot{display:none}.top{height:55px;padding:0 12px}.topright .status{display:none}.wrap{padding:16px 11px}.hero{align-items:flex-start;flex-direction:column}.hero h1{font-size:22px}.stats{gap:7px}.stat{padding:11px}.stat strong{font-size:18px}}
+
+/* VYRO polish pass: fluid layout, cleaner hierarchy, and touch-friendly tables */
+html{scroll-behavior:smooth}body{overflow-x:hidden}
+.app{grid-template-columns:232px minmax(0,1fr)}
+.brand{padding-bottom:28px}.nav{padding:12px 13px;border-radius:10px;font-weight:650}
+.top{padding-left:clamp(14px,3vw,36px);padding-right:clamp(14px,3vw,36px);backdrop-filter:blur(16px)}
+.wrap{max-width:1600px;padding:28px clamp(14px,3vw,36px) 42px}
+.stat,.panel{border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.16)}
+.stat{padding:16px 17px}.stat label{font-weight:750}.stat strong{font-variant-numeric:tabular-nums}
+.panel{padding:17px}.pt{font-size:13px}.ps{font-size:10px}
+.tablebox{width:100%;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+th{padding:11px 9px;font-weight:750}td{padding:12px 9px;vertical-align:middle}
+.token{min-width:150px}.coin{width:30px;height:30px;flex:0 0 30px;border-radius:9px}
+.btn,.trade{transition:background .18s,border-color .18s,transform .18s}.btn:active,.trade:active{transform:translateY(1px)}
+@media(max-width:1100px){.grid{grid-template-columns:minmax(0,1.35fr) minmax(270px,.9fr)}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){
+ .app{display:block}aside{height:auto;position:relative;padding:12px 12px 10px;border-right:0;border-bottom:1px solid var(--line)}
+ .brand{padding:0 6px 11px}.navs{display:flex;overflow-x:auto;gap:5px;scrollbar-width:none}.navs::-webkit-scrollbar{display:none}
+ .nav{white-space:nowrap;width:auto;flex:0 0 auto;padding:10px 12px}.aside-foot{display:none}
+ .top{height:58px;padding:0 14px}.wrap{padding:18px 14px 34px}.grid{grid-template-columns:minmax(0,1fr)}
+ .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.stat{padding:13px}.tablebox table{min-width:650px}
+}
+@media(max-width:520px){
+ .topright .status{display:none}.wrap{padding:15px 10px 28px}.hero{align-items:flex-start;flex-direction:column;gap:11px}
+ .hero h1{font-size:23px}.ph{align-items:flex-start;flex-direction:column}.controls{width:100%}
+ .controls .input{flex:1;max-width:none}.panel{padding:13px;margin-bottom:11px}.stat strong{font-size:18px}
+ .top{padding:0 10px}.toast{left:12px;right:12px;bottom:12px;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
 </style></head>
 <body><div class="app">
 <aside><div class="brand"><div class="mark">V</div> VYRO</div><div class="navs">
